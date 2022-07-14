@@ -1,0 +1,9 @@
+---
+- name: BigBlueButton Installer
+  hosts: all
+  gather_facts: true
+  become: true
+  roles:
+  - role: ansible-role-bigbluebutton
+    vars:
+      bbb_hostname: "{{ inventory_hostname }}"

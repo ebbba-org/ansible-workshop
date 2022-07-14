@@ -1,1 +1,24 @@
+# This is the main playbook which will do very basic tasks and include more advanced playbooks
 ---
+- name: Main Playbook
+  hosts: all
+  tasks:
+  - name: Show hostvars
+    debug:
+      msg: "{{ hostvars }}"
+      verbosity: 1
+    tags:
+      - always
+  - name: Run apt-get update
+    apt:
+      update_cache: yes
+    tags: always
+
+# service playbooks
+
+# BigBlueButton Service
+- import_playbook: sub/services/bigbluebutton.yaml
+  when: "'bigbluebutton' in group_names"
+  tags:
+    - bigbluebutton
+    - bbb
