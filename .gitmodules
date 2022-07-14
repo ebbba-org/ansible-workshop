@@ -1,0 +1,3 @@
+[submodule "roles/ansible-role-bigbluebutton"]
+	path = roles/ansible-role-bigbluebutton
+	url = https://github.com/ebbba-org/ansible-role-bigbluebutton.git

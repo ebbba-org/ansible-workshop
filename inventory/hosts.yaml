@@ -1,0 +1,25 @@
+---
+all:
+  vars:
+    ansible_user: root
+    ansible_python_interpreter: /usr/bin/python3
+  children:
+    customers:
+      children:
+        ebbba:
+          hosts:
+            ansibletest.ebbba.org:
+    services:
+      children:
+        test_service:
+          hosts:
+            ansibletest.ebbba.org:
+        # bigbluebutton:
+        #   hosts:
+        #     ansibletest.safeserver-support.de:
+        # b3scale:
+        #   hosts:
+        #     ansibletest.safeserver-support.de:
+        # coturn:
+        #   hosts:
+        #     ansibletest.safeserver-support.de:

@@ -1,0 +1,12 @@
+---
+
+extends: default
+
+ignore: |
+  roles/
+  collections/
+
+rules:
+  line-length: false
+  document-start: enable
+  truthy: enable
