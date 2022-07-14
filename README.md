@@ -2,6 +2,8 @@
 
 ## Introduction / Requirements
 
+You will need ansible installed.
+
 Init the git submodules.
 
 ```bash
